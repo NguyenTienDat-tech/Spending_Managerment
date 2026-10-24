@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -12,12 +13,22 @@ android {
 
     defaultConfig {
         applicationId = "com.example.spending_managerment"
-        minSdk = 36
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["room.schemaLocation"] = "$projectDir/schemas"
+            }
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -43,4 +54,20 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    //Thư viện hilt
+    implementation(libs.hilt.android)
+    annotationProcessor(libs.hilt.compiler)
+
+    //Thư viện Room database
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    //Thư viện navigation, lifecycle, recycle
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
+    implementation(libs.lifecycle.livedata)
+    implementation(libs.lifecycle.viewmodel.savedstate)
+    implementation(libs.recyclerview)
+
 }
