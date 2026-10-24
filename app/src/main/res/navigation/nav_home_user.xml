@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_home_user"
+    app:startDestination="@id/transactionFragment">
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.spending_managerment.ui.home_user.transaction.TransactionFragment"
+        android:label="transactionFragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.spending_managerment.ui.home_user.stats.StatsFragment"
+        android:label="settingFragment"/>
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.spending_managerment.ui.home_user.setting.SettingFragment"
+        android:label="settingFragment"/>
+</navigation>
