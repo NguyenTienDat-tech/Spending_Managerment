@@ -7,16 +7,16 @@
     <fragment
         android:id="@+id/transactionFragment"
         android:name="com.example.spending_managerment.ui.home_user.transaction.TransactionFragment"
-        android:label="transactionFragment">
+        android:label="@string/app_transaction">
     </fragment>
 
     <fragment
         android:id="@+id/statsFragment"
         android:name="com.example.spending_managerment.ui.home_user.stats.StatsFragment"
-        android:label="settingFragment"/>
+        android:label="@string/app_statistics"/>
 
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.example.spending_managerment.ui.home_user.setting.SettingFragment"
-        android:label="settingFragment"/>
+        android:label="@string/app_setting"/>
 </navigation>

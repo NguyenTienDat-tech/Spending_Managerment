@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#1F509A</color>
+    <color name="primary">#215199</color>
+    <color name="screen_background">#FDF8FE</color>
+    <color name="text_primary">#202020</color>
+    <color name="text_secondary">#555158</color>
+    <color name="settings_divider">#DDD8DF</color>
+    <color name="navigation_indicator">#426DB0</color>
+    <color name="menu_background">#F2ECF8</color>
+    <color name="add_button_background">#5DC2F0</color>
     <color name="totalColor">#9C6500</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

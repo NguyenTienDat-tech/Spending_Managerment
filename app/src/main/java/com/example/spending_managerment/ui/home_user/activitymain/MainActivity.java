@@ -1,6 +1,7 @@
 package com.example.spending_managerment.ui.home_user.activitymain;
 
 import android.os.Bundle;
+import android.os.Build;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this, SystemBarStyle.dark(android.graphics.Color.TRANSPARENT), SystemBarStyle.dark(android.graphics.Color.TRANSPARENT));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            getWindow().setNavigationBarContrastEnforced(false);
+        }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -44,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment host = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.navHomeFragment);
         if (host == null) throw new IllegalStateException("Missing NavHostFragment");
         navController = host.getNavController();
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            binding.toolBar.setTitle(destination.getLabel());
+        });
     }
 
 

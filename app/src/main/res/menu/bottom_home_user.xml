@@ -3,19 +3,19 @@
     <item
         android:id="@+id/transactionFragment"
         android:icon="@drawable/ic_transaction"
-        android:title="Giao dịch"/>
+        android:title="@string/app_transaction"/>
 
     <item
         android:id="@+id/statsFragment"
         android:icon="@drawable/ic_chart"
-        android:title="Thống kê"/>
+        android:title="@string/app_statistics"/>
 
     <item
         android:id="@+id/settingFragment"
         android:icon="@drawable/ic_user"
-        android:title="Cài đặt"/>
+        android:title="@string/app_setting"/>
     <item
         android:id="@+id/more"
         android:icon="@drawable/ic_more"
-        android:title="Thêm" />
+        android:title="@string/app_more" />
 </menu>

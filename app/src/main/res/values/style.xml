@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="SpendingNavigationIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">#426DB0</item>
+        <item name="android:color">@color/navigation_indicator</item>
+        <item name="android:width">64dp</item>
+        <item name="android:height">34dp</item>
+        <item name="shapeAppearance">@style/SpendingNavigationIndicatorShape</item>
+    </style>
+    <style name="SpendingNavigationIndicatorShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="SpendingNavigationLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="SpendingNavigationLabel.Active" parent="SpendingNavigationLabel">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="SpendingToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
     </style>
     <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">15sp</item> <!-- Tăng kích thước văn bản -->
-        <item name="android:textStyle">bold</item> <!-- In đậm nếu cần -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="RoundedFAB" parent="">

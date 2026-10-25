@@ -1,3 +1,6 @@
 <resources>
     <dimen name="bottom_nav_icon_size">24dp</dimen>
+    <dimen name="bottom_nav_height">88dp</dimen>
+    <dimen name="screen_toolbar_height">64dp</dimen>
+    <dimen name="date_header_height">82dp</dimen>
 </resources>
