@@ -63,4 +63,21 @@ public class StatsFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_stats, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        View income = view.findViewById(R.id.incomeBtn);
+        View expense = view.findViewById(R.id.expenseBtn);
+        // Presentation state only; no transactions are queried or calculated yet.
+        expense.setSelected(true);
+        income.setOnClickListener(button -> {
+            income.setSelected(true);
+            expense.setSelected(false);
+        });
+        expense.setOnClickListener(button -> {
+            income.setSelected(false);
+            expense.setSelected(true);
+        });
+    }
 }
